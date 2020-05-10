@@ -91,8 +91,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>d3d11</TargetName>
-    <OutDir>../build</OutDir>
-    <IntDir>../temp</IntDir>
+    <OutDir>../build/</OutDir>
+    <IntDir>../d3d11temp/</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -130,7 +130,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;WRAPPER_ON_PROCESS_ATTACH=on_process_attach;D3D11WRAPPER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;WRAPPER_ON_PROCESS_ATTACH=on_process_attach;WRAPPER_ON_PROCESS_DETATCH=on_process_detach;WRAPPER_ON_THREAD_ATTACH=on_thread_attach;WRAPPER_ON_THREAD_DETATCH=on_thread_detach;D3D11WRAPPER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>include;lib;lib/inih;lib/inih/cpp;../include;../lib;</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
